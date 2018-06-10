@@ -1,0 +1,360 @@
+package org.apache.jsp;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.jsp.*;
+import java.util.Iterator;
+import java.util.ArrayList;
+import java.sql.Connection;
+
+public final class checkout_jsp extends org.apache.jasper.runtime.HttpJspBase
+    implements org.apache.jasper.runtime.JspSourceDependent {
+
+  private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
+
+  private static java.util.List<String> _jspx_dependants;
+
+  private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
+
+  public java.util.List<String> getDependants() {
+    return _jspx_dependants;
+  }
+
+  public void _jspService(HttpServletRequest request, HttpServletResponse response)
+        throws java.io.IOException, ServletException {
+
+    PageContext pageContext = null;
+    HttpSession session = null;
+    ServletContext application = null;
+    ServletConfig config = null;
+    JspWriter out = null;
+    Object page = this;
+    JspWriter _jspx_out = null;
+    PageContext _jspx_page_context = null;
+
+    try {
+      response.setContentType("text/html;charset=UTF-8");
+      pageContext = _jspxFactory.getPageContext(this, request, response,
+      			null, true, 8192, true);
+      _jspx_page_context = pageContext;
+      application = pageContext.getServletContext();
+      config = pageContext.getServletConfig();
+      session = pageContext.getSession();
+      out = pageContext.getOut();
+      _jspx_out = out;
+      _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
+
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+
+    Connection con = (Connection)request.getServletContext().getAttribute("mycon");
+    ArrayList list = (ArrayList)request.getSession().getAttribute("cart");
+    String unm = (String)request.getSession().getAttribute("unm");
+    String mob = (String)request.getSession().getAttribute("mobile");
+
+      out.write("\n");
+      out.write("\n");
+      out.write("<!DOCTYPE html>\n");
+      out.write("<html>\n");
+      out.write("    \n");
+      out.write("    <head>\n");
+      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
+      out.write("        <title>Delivery Boyz</title>\n");
+      out.write("        <link rel=\"stylesheet\" type=\"text/css\" href=\"mystyle8.css\">\n");
+      out.write("        <script type=\"text/javascript\" src=\"Content/jquery-3.1.1.js\"></script>\n");
+      out.write("        <script type=\"text/javascript\" src=\"myjquery6.js\"></script>\n");
+      out.write("    </head> \n");
+      out.write("    <body>\n");
+      out.write("        ");
+      org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "home.jsp", out, false);
+      out.write("\n");
+      out.write("        <div id=\"container\">\n");
+      out.write("            <div id=\"information\">\n");
+      out.write("            <div id=\"checkout\">Checkout</div>\n");
+      out.write("            <div class=\"box_info\">\n");
+      out.write("                <div class=\"heading one\">Delivery location</div>\n");
+      out.write("                <div class=\"detail\">Set your exact delivery address</div>\n");
+      out.write("                <div>\n");
+      out.write("                    <div class=\"detailhead\">\n");
+      out.write("                        <div class=\"detailsub\">Flat/House no.</div>        \n");
+      out.write("                        <div><input type=\"text\">\n");
+      out.write("                        <span class=\"botbord\"></span>\n");
+      out.write("                        <span class=\"botbord2\" id=\"bot1\"></span>\n");
+      out.write("                        </div>\n");
+      out.write("                    </div>\n");
+      out.write("                    <div class=\"detailhead\">\n");
+      out.write("                        <div class=\"detailsub\">Street name</div>\n");
+      out.write("                        <div><input type=\"text\">\n");
+      out.write("                        <span class=\"botbord\"></span>\n");
+      out.write("                        <span class=\"botbord2\" id=\"bot1\"></span>\n");
+      out.write("                        </div>\n");
+      out.write("                    </div>\n");
+      out.write("                    <div class=\"detailhead\">\n");
+      out.write("                        <div class=\"detailsub\">Landmark</div>\n");
+      out.write("                        <div><input type=\"text\">\n");
+      out.write("                        <span class=\"botbord\"></span>\n");
+      out.write("                        <span class=\"botbord2\" id=\"bot1\"></span>\n");
+      out.write("                        </div>\n");
+      out.write("                    </div>\n");
+      out.write("                    <div>\n");
+      out.write("                        <div  class=\"detailsub\">Area</div>\n");
+      out.write("                        <div  class=\"detailsub\"><input type=\"text\" value=\"");
+      out.print(request.getSession().getAttribute("add"));
+      out.write("\" style=\"background-color: white;color:#838c8d;\" disabled>\n");
+      out.write("                     <span class=\"botbord\"></span>\n");
+      out.write("                        <span class=\"botbord2\" id=\"bot1\"></span></div>\n");
+      out.write("                    </div>\n");
+      out.write("                </div>\n");
+      out.write("                <div></div>\n");
+      out.write("            </div>\n");
+      out.write("            <div class=\"box_info\">\n");
+      out.write("                <div class=\"heading two\">Delivery time</div>\n");
+      out.write("                <div class=\"detail\">Set your delivery time</div>\n");
+      out.write("                <div class=\"sel\">\n");
+      out.write("                    <div class=\"button\"><div class=\"top\"></div>\n");
+      out.write("                    <div class=\"bottom\"></div><button class=\"asp\">As soon as possible</button></div>\n");
+      out.write("                    <div class=\"button\"><div class=\"top\"></div>\n");
+      out.write("                    <div class=\"bottom\"></div><button class=\"aps\">As per schedule</button></div>\n");
+      out.write("                </div>\n");
+      out.write("            </div>\n");
+      out.write("            <div class=\"box_info\">\n");
+      out.write("                <div class=\"heading three\">Contact info</div> \n");
+      out.write("                <div class=\"detail\">Check your contact info</div>\n");
+      out.write("                <div>\n");
+      out.write("                    <div class=\"common\">");
+      out.print(unm);
+      out.write("</div>\n");
+      out.write("                    <div class=\"common\">+91");
+      out.print(mob);
+      out.write("</div>\n");
+      out.write("                </div>\n");
+      out.write("                <div class=\"link\">\n");
+      out.write("                    <br><br>\n");
+      out.write("                    <a href=\"profile.jsp\"><button class=\"edit\">Edit your information</button></a>\n");
+      out.write("                </div>\n");
+      out.write("            </div>\n");
+      out.write("            <div class=\"box_info\">\n");
+      out.write("                <div class=\"heading four\">Payment info</div>\n");
+      out.write("                <div class=\"detail\">Check your payment info</div>\n");
+      out.write("                <div>\n");
+      out.write("                    <div class=\"button\"><div class=\"top\"></div>\n");
+      out.write("                    <div class=\"bottom\"></div><button>Cash on delivery</button></div>\n");
+      out.write("                    <div class=\"button\"><div class=\"top\"></div>\n");
+      out.write("                    <div class=\"bottom\"></div><button>Online payment</button></div>\n");
+      out.write("                </div>\n");
+      out.write("            </div>\n");
+      out.write("        </div>\n");
+      out.write("        <div id=\"summary\">\n");
+      out.write("            <div id=\"ucart\">Your Cart</div>\n");
+      out.write("            <div class=\"order list\"><textarea rows=\"5\" style=\"background-color: white;color:#838c8d;\" disabled>");
+
+                try{
+                Iterator i = list.iterator();
+                while(i.hasNext()){
+                    out.print(i.next()+"\n");
+                };
+                }
+                catch(Exception e){
+                 out.print("There is some error in loading cart");
+                }
+            
+      out.write("</textarea></div>\n");
+      out.write("            <div></div>\n");
+      out.write("            <div class=\"detail\">\n");
+      out.write("                <div class=\"total symbol\"><h2>Total</h2></div>\n");
+      out.write("                <div class=\"total sum\"></div>\n");
+      out.write("                <div class=\"detail\"></div>\n");
+      out.write("            </div>\n");
+      out.write("        </div>\n");
+      out.write("        </div>\n");
+      out.write("            <div class=\"side payment\">\n");
+      out.write("                \n");
+      out.write("            </div>\n");
+      out.write("            \n");
+      out.write("            <div class=\"side schedule\">\n");
+      out.write("                <div><strong>&#10006;</strong></div>\n");
+      out.write("                <div>\n");
+      out.write("                <div>When do you want to receive it?</div>\n");
+      out.write("                <div>Choose a day</div>\n");
+      out.write("                <div>\n");
+      out.write("                    <div onclick=\"IntervalToday()\"><span>Today</span><span></span></div>\n");
+      out.write("                     <div onclick=\"Interval()\"><span class=\"day\"></span><span class=\"date\"></span></div>\n");
+      out.write("                     <div onclick=\"Interval()\"><span class=\"day\"></span><span class=\"date\"></span></div>\n");
+      out.write("                     <div onclick=\"Interval()\"><span class=\"day\"></span><span class=\"date\"></span></div>\n");
+      out.write("                     <div onclick=\"Interval()\"><span class=\"day\"></span><span class=\"date\"></span></div>\n");
+      out.write("                     <div onclick=\"Interval()\"><span class=\"day\"></span><span class=\"date\"></span></div>\n");
+      out.write("                     <div onclick=\"Interval()\"><span class=\"day\"></span><span class=\"date\"></span></div>\n");
+      out.write("                </div>\n");
+      out.write("                </div>\n");
+      out.write("                <div>\n");
+      out.write("                    <div>Choose an interval</div>\n");
+      out.write("                    <div>\n");
+      out.write("                         <div  id=\"early\"><span class=\"interval\">Early Morning</span></div>\n");
+      out.write("                         <div id=\"morn\"><span class=\"interval\" >Morning</span></div>\n");
+      out.write("                         <div id=\"after\"><span class=\"interval\">Afternoon</span></div>\n");
+      out.write("                         <div id=\"even\"><span class=\"interval\">Evening</span></div>\n");
+      out.write("                    </div>\n");
+      out.write("                </div>\n");
+      out.write("                <div>\n");
+      out.write("                    <div>Choose an hour</div>\n");
+      out.write("                    <div>\n");
+      out.write("                         <div><span class=\"hour\"></span></div>\n");
+      out.write("                         <div><span class=\"hour\"></span></div>\n");
+      out.write("                         <div><span class=\"hour\"></span></div>\n");
+      out.write("                         <div><span class=\"hour\"></span></div>\n");
+      out.write("                         <div><span class=\"hour\"></span></div>\n");
+      out.write("                         <div><span class=\"hour\"></span></div>\n");
+      out.write("                    </div>\n");
+      out.write("                </div>\n");
+      out.write("                <div><button>Schedule Order</button></div>\n");
+      out.write("            </div>\n");
+      out.write("            ");
+      org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "footer.jsp", out, false);
+      out.write("\n");
+      out.write("            <script>\n");
+      out.write("                window.onload = IntervalToday();      \n");
+      out.write("                var daybox = document.getElementsByClassName(\"day\");\n");
+      out.write("                var datebox = document.getElementsByClassName(\"date\");\n");
+      out.write("                var hourbox = document.getElementsByClassName(\"hour\");\n");
+      out.write("                var today = new Date();\n");
+      out.write("                var Day =  today.getDay()+1; \n");
+      out.write("                var Time = today.getTime();\n");
+      out.write("                var Date = today.getDate()+1;\n");
+      out.write("                \n");
+      out.write("                var month = new Array();\n");
+      out.write("                month[0] = \"Jan\";\n");
+      out.write("                month[1] = \"Feb\";\n");
+      out.write("                month[2] = \"March\";\n");
+      out.write("                month[3] = \"April\";\n");
+      out.write("                month[4] = \"May\";\n");
+      out.write("                month[5] = \"June\";\n");
+      out.write("                month[6] = \"July\";\n");
+      out.write("                month[7] = \"Aug\";\n");
+      out.write("                month[8] = \"Sept\";\n");
+      out.write("                month[9] = \"Oct\";\n");
+      out.write("                month[10] = \"Nov\";\n");
+      out.write("                month[11] = \"Dec\";\n");
+      out.write("                \n");
+      out.write("                var i = 1,j = 0;\n");
+      out.write("                \n");
+      out.write("                for(i=0;i<6;i++){\n");
+      out.write("                    daybox[i].innerHTML = Date+\" \"+month[today.getMonth()];\n");
+      out.write("                    switch(Day){\n");
+      out.write("                        case 0:\n");
+      out.write("                            datebox[i].innerHTML = ' Sunday';\n");
+      out.write("                            Day = Day + 1;\n");
+      out.write("                            break;\n");
+      out.write("                            \n");
+      out.write("                        case 1:\n");
+      out.write("                            datebox[i].innerHTML = ' Monday';\n");
+      out.write("                            Day = Day + 1;\n");
+      out.write("                            break;  \n");
+      out.write("                            \n");
+      out.write("                         case 2:\n");
+      out.write("                            datebox[i].innerHTML = ' Tuesday';\n");
+      out.write("                            Day = Day + 1;\n");
+      out.write("                            break;\n");
+      out.write("                    \n");
+      out.write("                        case 3:\n");
+      out.write("                            datebox[i].innerHTML = ' Wednesday';\n");
+      out.write("                            Day = Day + 1;\n");
+      out.write("                            break;\n");
+      out.write("                            \n");
+      out.write("                        case 4:\n");
+      out.write("                            datebox[i].innerHTML = ' Thursday';\n");
+      out.write("                            Day = Day + 1;\n");
+      out.write("                            break;\n");
+      out.write("                        \n");
+      out.write("                        case 5:\n");
+      out.write("                            datebox[i].innerHTML = ' Friday';\n");
+      out.write("                            Day = Day + 1;\n");
+      out.write("                            break;\n");
+      out.write("                        \n");
+      out.write("                        case 6:            \n");
+      out.write("                            datebox[i].innerHTML = ' Saturday';\n");
+      out.write("                            Day = Day + 1;\n");
+      out.write("                            break;       \n");
+      out.write("                        }\n");
+      out.write("                        Date+=1;\n");
+      out.write("                    if(Day%7===0){\n");
+      out.write("                        Day = 0;\n");
+      out.write("                        }\n");
+      out.write("                }\n");
+      out.write("                \n");
+      out.write("                function Interval(){\n");
+      out.write("                    document.getElementById(\"early\").addEventListener(\"click\",function(){showTime(0);});\n");
+      out.write("                    document.getElementById(\"morn\").addEventListener(\"click\",function(){showTime(6);});\n");
+      out.write("                    document.getElementById(\"after\").addEventListener(\"click\",function(){showTime(12);});\n");
+      out.write("                    document.getElementById(\"even\").addEventListener(\"click\",function(){showTime(18);});\n");
+      out.write("                }\n");
+      out.write("                \n");
+      out.write("                function IntervalToday(){\n");
+      out.write("                    var Time = (new Date()).getHours();\n");
+      out.write("                    \n");
+      out.write("                    if(Time>=23){\n");
+      out.write("                    document.getElementById(\"early\").addEventListener(\"click\",function(){return false;});\n");
+      out.write("                    document.getElementById(\"morn\").addEventListener(\"click\",function(){return false;});\n");
+      out.write("                    document.getElementById(\"after\").addEventListener(\"click\",function(){return false;});\n");
+      out.write("                    document.getElementById(\"even\").addEventListener(\"click\",function(){return false;});\n");
+      out.write("                    }\n");
+      out.write("                    else if(Time>=18){ \n");
+      out.write("                    document.getElementById(\"morn\").addEventListener(\"click\",function(){return false;});\n");
+      out.write("                    document.getElementById(\"after\").addEventListener(\"click\",function(){return false;});\n");
+      out.write("                    document.getElementById(\"early\").addEventListener(\"click\",function(){return false;});\n");
+      out.write("                    document.getElementById(\"even\").addEventListener(\"click\",function(){showTime(18);});\n");
+      out.write("                    }\n");
+      out.write("                    else if(Time>=12){\n");
+      out.write("                    document.getElementById(\"morn\").addEventListener(\"click\",function(){return false;});\n");
+      out.write("                    document.getElementById(\"early\").addEventListener(\"click\",function(){return false;});\n");
+      out.write("                    document.getElementById(\"after\").addEventListener(\"click\",function(){showTime(12);});\n");
+      out.write("                    document.getElementById(\"even\").addEventListener(\"click\",function(){showTime(18);});\n");
+      out.write("                    }\n");
+      out.write("                    else if(Time>=6){\n");
+      out.write("                    document.getElementById(\"early\").addEventListener(\"click\",function(){return false;});\n");
+      out.write("                     document.getElementById(\"morn\").addEventListener(\"click\",function(){showTime(6);});\n");
+      out.write("                    document.getElementById(\"after\").addEventListener(\"click\",function(){showTime(12);});\n");
+      out.write("                    document.getElementById(\"even\").addEventListener(\"click\",function(){showTime(18);});\n");
+      out.write("                    }\n");
+      out.write("                    else{\n");
+      out.write("                         document.getElementById(\"early\").addEventListener(\"click\",function(){showTime(0);});\n");
+      out.write("                    document.getElementById(\"morn\").addEventListener(\"click\",function(){showTime(6);});\n");
+      out.write("                    document.getElementById(\"after\").addEventListener(\"click\",function(){showTime(12);});\n");
+      out.write("                    document.getElementById(\"even\").addEventListener(\"click\",function(){showTime(18);});  \n");
+      out.write("                    }\n");
+      out.write("                }\n");
+      out.write("                \n");
+      out.write("                function showTime(timeGet){\n");
+      out.write("                    if(timeGet<12){\n");
+      out.write("                        var prefix=\"0\";\n");
+      out.write("                    }\n");
+      out.write("                    else{\n");
+      out.write("                        var prefix=\"\";\n");
+      out.write("                    }\n");
+      out.write("                    for(i=0;i<6;i++){\n");
+      out.write("                        hourbox[i].innerHTML=prefix+timeGet+\"-\";\n");
+      out.write("                         if(timeGet>8){var prefix=\"\";}\n");
+      out.write("                        hourbox[i].innerHTML+=prefix+(timeGet=timeGet+1);\n");
+      out.write("                       \n");
+      out.write("                    }\n");
+      out.write("                }\n");
+      out.write("                \n");
+      out.write("\n");
+      out.write("            </script>\n");
+      out.write("    </body>\n");
+      out.write("    \n");
+      out.write("</html>\n");
+      out.write("\n");
+    } catch (Throwable t) {
+      if (!(t instanceof SkipPageException)){
+        out = _jspx_out;
+        if (out != null && out.getBufferSize() != 0)
+          out.clearBuffer();
+        if (_jspx_page_context != null) _jspx_page_context.handlePageException(t);
+        else throw new ServletException(t);
+      }
+    } finally {
+      _jspxFactory.releasePageContext(_jspx_page_context);
+    }
+  }
+}

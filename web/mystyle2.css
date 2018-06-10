@@ -1,0 +1,111 @@
+    *{
+                box-sizing: border-box;
+                margin:0;
+            }
+            
+            header{
+                position:relative;
+                width:100%;
+                letter-spacing: 1px;
+                word-spacing: 1px;
+                background-color: #f4511e; /* Orange */
+                color: white;/*linear-gradient(-145deg, #3051F1 40% , #C92BB7 50% ) no-repeat*/
+                font-family: cursive;
+                font-size: 40px;
+                box-shadow: 2px 2px 3px 3px black;
+                border-radius: 5px;
+                text-align: center;
+                padding:20px;
+                OVERFLOW:HIDDEN;
+            }
+            
+            .closebtn{
+                position:absolute;
+                top:10px;
+                right:20px;
+                color:grey;
+                font-size: 30px;
+                cursor:pointer;
+            }
+            
+            .closebtn:hover{
+                color: orange;
+                animation: rotate 1.5s;
+            }
+            
+            @keyframes rotate{
+                from{transform:rotate(0);}
+                to{transform:rotate(360deg);}
+            }
+            
+            #menuIcon{
+                position:absolute;
+                top:20px;
+                left:50px;
+                cursor: pointer;
+                overflow:hidden;
+            }
+            
+           
+        
+            #modal{
+                background-color: rgba(0,0,0,0);
+                z-index:99;
+            }
+            #sideMenu{
+               background-color: #2b4656;
+               color: #91a4b5; 
+               min-height: 700px;
+               overflow-x: hidden;
+               overflow-y: hidden;
+               width:0;
+               left:-50px;
+               position: relative;
+               top:-105px;
+               background-image: url(Content/envelope.png);
+               background-repeat: no-repeat;
+               background-size: 300px 300px;
+               background-position: 30px -32px;
+               clear:both;
+               z-index: 99;
+            }
+
+            #menuList{
+                margin-top:40px;
+               
+            }
+            
+          #menuList a{
+                font-size: 17px;
+                font-weight: 600;
+                font-family: GothamRounded-Book,sans-serif;
+                display: block;
+                text-decoration: none;
+                color: #91a4b5;
+                padding: 17px 0 17px 35px;
+                text-align:center;
+                border-bottom: 1px solid rgba(36,53,68,0.7);
+                transition: 0.4s;
+            }
+            
+            #menuList a:hover{
+                background-color: #0073cf;
+                color:whitesmoke;
+            }
+            
+            
+            
+            #perDet{
+                
+                margin-top: 50px;
+                color:black;
+               
+                }
+             #perImg{
+               border: 2px solid black;
+               border-radius:50%;
+               
+                margin-left: 40%;
+                
+                }
+            

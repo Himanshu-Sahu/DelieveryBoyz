@@ -1,0 +1,364 @@
+            *{
+                box-sizing: border-box;
+                margin: 0;
+               overflow:auto;
+            }
+            #poster{
+                background-image: url("Content/poster.jpg");
+                background-size: 100% 100%;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                min-height: 800px;
+                opacity:0.8;
+                filter: contrast(150%);
+                border-radius: 5px;
+            }  
+            
+            #content{
+                padding:0 40px;
+            }
+            
+            #user{
+                background-color: rgba(40,47,55,0.9) ;
+                color:aqua;
+                box-shadow: 2px 2px 3px black;
+                padding:10px 15px;
+                line-height: 20px;
+                word-spacing: 3px;
+                border-radius: 20px;
+                margin:40px;
+                float:right;
+                display: inline-block;
+                cursor:pointer;
+                letter-spacing: 2px;
+            }
+            
+            #user:hover{
+                background-color: rgb(51, 71, 92);
+            }
+            
+            #entry1,#entry2{
+            transition: 0.3s color;
+           }
+            #entry1{
+                padding:5px;
+                border-right: 1px solid aqua;
+            }
+            
+           #entry1:hover,#entry2:hover {
+                color:white;
+            }
+            
+            .modal{
+                background-color: rgba(0,0,0,0.8);
+                z-index: 99;
+                display:none;
+                position:fixed;
+                width:100%;
+                height: 100%;
+                left:0;
+                top:0;
+                overflow:hidden;
+            }
+            
+            #logo{
+                width:50%;
+                height:50%;
+            }
+            
+            .modal-content1,.modal-content2{
+                border-radius: 5px;
+                display:none;
+                background-color: whitesmoke;
+                margin: 5% auto;
+                width:30%;
+                padding:10px;
+                overflow-y: hidden;
+                height:auto;
+            }
+            
+            .animate {
+        animation: show 0.4s;
+            }
+            @keyframes show{
+                from{opacity:0}
+                to{opacity:1}
+            }
+            
+            input[type=text],input[type=password],input[type=submit]{
+                margin:10px;
+                width:90%;
+                display:block;
+                padding:15px 40px;
+                border:none;
+               
+            }
+            
+            input[type=submit]{
+                background-color: rgb(0, 80, 255);
+                border-radius:5px;
+                color: white;
+                letter-spacing: 2px;
+            }
+            
+            input[type=submit]:hover{
+                background-color: rgb(0, 150 , 255);
+            }
+            
+            .close {
+              position: absolute;
+                right: 25px;
+                top: 10px;
+                color: black;
+                font-size: 35px;
+                font-weight: bold;
+                }
+
+            .close:hover,.close:focus {
+            color: red;
+            cursor: pointer;
+            animation:round 1s ease-out;
+             }
+            
+             @keyframes round{
+                 from{transform:rotate(0deg);}
+                 to{transform:rotate(360deg)}
+             }
+             
+            .showUser{
+                background-image: url("Content/id.png");
+                background-repeat: no-repeat;
+                background-size: 25px;
+                background-position:10px;
+            }
+            
+            #passlog{
+                background-image: url("Content/lock.png");
+                background-repeat: no-repeat;
+                background-size: 25px;
+                background-position:10px;
+            }
+            
+            #passsign{
+                background-image: url("Content/lock.png");
+                background-repeat: no-repeat;
+                background-size: 25px;
+                background-position:10px;
+            }
+            
+            #mob{
+                background-image: url("Content/mobile.png");
+                background-repeat: no-repeat;
+                background-size: 25px;
+                background-position:10px;
+            }
+            
+             #unm{
+                background-image: url("Content/man.png");
+                background-repeat: no-repeat;
+                background-size: 25px;
+                background-position:10px;
+            }
+            
+            #college{
+                background-image: url("Content/University.png");
+                background-repeat: no-repeat;
+                background-size: 25px;
+                background-position:10px;
+            }
+            
+            #loader{
+                position:absolute;
+                top:40%;
+                left:45%;
+                height:150px;
+                width:150px;
+                border:20px solid grey;
+                border-radius: 50%;
+                border-top:20px solid rgb(0, 80, 255);
+                animation: load 1s linear infinite;
+            }
+            
+            @keyframes load{
+                0%{transform:rotate(0deg);}
+                100%{transform:rotate(360deg);}
+            }
+            
+            #content{
+                display:none;
+                animation: loaded 1s;
+            }
+            
+            @keyframes loaded{
+                from{opacity:0;}
+                to{opacity:1;}
+            }
+            
+            #name{
+                display:block;
+                position:absolute;
+                color:white;
+                margin:0 20%;
+                bottom:0;
+                font-size: 50px;
+                animation: attract 1s linear infinite;
+                font-family: Caflisch Script Pro, cursive;
+            }
+            
+            @keyframes attract{
+                from{opacity:0.4}
+                to{opacity:0.8}
+            }
+            
+            .container{
+             min-height: 380px;
+             padding: 50px 70px 0 70px;
+                 }
+                 
+                 .container2{
+                     padding: 50px 40px 0 0;
+             min-height: 350px;
+                 }
+.reviews{
+position:relative;
+width:100%;
+height:300px;
+text-align:center;
+padding-top:35px;
+background-color:#f2f2f2;
+}
+
+.item{
+display:none;
+}
+   .dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color:white;
+  border: 2px solid black;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: black;;
+}
+
+
+.prev {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  left:25%;
+  width:auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 38px;
+  transition: 0.6s ease;
+  border-radius: 3px 0 0 3px;
+}
+
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  right:25%;
+  width:auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 38px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.6);
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+#scrolling{
+    display:none;
+    text-decoration: none;
+    position: fixed;
+    bottom:20px;
+    right:50px;
+    background-color: #0086b3;
+    color:white;
+    cursor:pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    z-index:99;
+   border:none;
+   font-size: 20px;
+   animation: bott 1s;   
+   box-shadow: 0 3px grey;
+}
+
+@keyframes bott{
+    from{bottom:-20px;transform:scale(0.2,0.2)}
+    to{bottom:20px;transform:scale(1,1)}
+}
+
+
+.container2{
+    position:relative;
+    overflow: hidden;
+}
+
+#test{
+    position:absolute;
+    right:20px;
+    top:60px;
+}
+
+#overlay{
+    position: absolute;
+    left:50px;
+    top:60px;
+    display:none;
+    animation: showoff 1.5s;
+}
+@keyframes showoff{
+    from{top:200px}
+    to{top:60px}
+}
+
+title{
+    background-color: black;
+    border:none;
+}
+
+#moveLeft{
+position:relative;
+left:0;
+animation:flash .8s ease-in;
+}
+@keyframes flash{
+from{left:-1000px;}
+to{left:0;}
+}
+#moveRight{
+position:relative;
+right:0;
+animation:flash1 .8s ease-in;
+}
+@keyframes flash1{
+from{right:-1000px;}
+to{right:0;}
+}
